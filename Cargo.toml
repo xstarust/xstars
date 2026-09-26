@@ -1,0 +1,44 @@
+[package]
+name = "xstars"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "紫微斗数排盘引擎 — 紫微斗数算法库，支持多流派、多语言、运限系统"
+readme = "README.md"
+repository = "https://github.com/xstarust/xstars"
+homepage = "https://github.com/xstarust/xstars"
+documentation = "https://docs.rs/xstars"
+keywords = ["ziwei", "astrology", "紫微斗数", "doushu", "chinese-astrology"]
+categories = ["science::astronomy", "algorithms"]
+include = [
+  "src/**",
+  "tests/**",
+  "benches/**",
+  "README.md",
+  "Cargo.toml",
+  "LICENSE",
+]
+
+[workspace]
+resolver = "2"
+members = [".", "cli"]
+
+[dependencies]
+xcal = { version = "0.1.0", path = "../xcal" }
+once_cell = "1.19"
+serde = { version = "1", features = ["derive"], optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "astrolabe"
+harness = false
+
+[features]
+default = []
+serde = ["dep:serde"]
+
+[lints.rust]
+unsafe_code = "forbid"

@@ -1,0 +1,19 @@
+[package]
+name = "xstars-cli"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "紫微斗数排盘命令行工具"
+readme = "README.md"
+repository = "https://github.com/xstarust/xstars"
+homepage = "https://github.com/xstarust/xstars"
+publish = false
+
+[dependencies]
+xstars = { version = "0.1.0", path = "..", features = ["serde"] }
+clap = { version = "4", features = ["derive"] }
+serde_json = "1"
+
+[lints.rust]
+unsafe_code = "forbid"
