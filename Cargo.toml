@@ -10,7 +10,7 @@ repository = "https://github.com/xstarust/xstars"
 homepage = "https://github.com/xstarust/xstars"
 documentation = "https://docs.rs/xstars"
 keywords = ["ziwei", "astrology", "doushu", "chinese-astrology"]
-categories = ["science::astronomy", "algorithms"]
+categories = ["algorithms"]
 include = [
   "src/**",
   "tests/**",
