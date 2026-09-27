@@ -9,7 +9,7 @@ readme = "README.md"
 repository = "https://github.com/xstarust/xstars"
 homepage = "https://github.com/xstarust/xstars"
 documentation = "https://docs.rs/xstars"
-keywords = ["ziwei", "astrology", "紫微斗数", "doushu", "chinese-astrology"]
+keywords = ["ziwei", "astrology", "doushu", "chinese-astrology"]
 categories = ["science::astronomy", "algorithms"]
 include = [
   "src/**",
