@@ -60,7 +60,7 @@ pub fn get_ziwei_pos(lunar_day: usize, wuxing: &WuxingGroup) -> PalacePos {
     let mut offset: usize = 0;
     let quotient = loop {
         let divisor = lunar_day + offset;
-        if divisor % wuxing_val == 0 {
+        if divisor.is_multiple_of(wuxing_val) {
             break divisor / wuxing_val;
         }
         offset += 1;
@@ -72,7 +72,7 @@ pub fn get_ziwei_pos(lunar_day: usize, wuxing: &WuxingGroup) -> PalacePos {
     let base = PalacePos::Yin + q - 1; // q=0→丑, q=1→寅, q=2→卯
 
     // 偏移偶数→顺行，奇数→逆行
-    if offset % 2 == 0 {
+    if offset.is_multiple_of(2) {
         base + offset
     } else {
         base - offset

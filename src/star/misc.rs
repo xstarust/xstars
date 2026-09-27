@@ -354,7 +354,7 @@ pub fn get_monthly_star_pos(
 pub fn get_xunkong_pos(year_dz: Dizhi, year_tg: Tiangan) -> PalacePos {
     let palace_coord = PalacePos::from(year_dz).index();
     let mut xunkong = (palace_coord + 22 - year_tg.index()) % 12;
-    if year_dz.is_yang() != (xunkong % 2 == 0) {
+    if year_dz.is_yang() != xunkong.is_multiple_of(2) {
         xunkong = (xunkong + 1) % 12;
     }
     PalacePos::from(xunkong)

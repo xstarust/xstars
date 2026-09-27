@@ -2,7 +2,7 @@
 name = "xstars-cli"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.88"
 license = "MIT"
 description = "紫微斗数排盘命令行工具"
 readme = "README.md"

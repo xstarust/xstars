@@ -2,7 +2,7 @@
 
 ## 项目范围
 
-- 这是 Rust 2024 workspace，最低 Rust 版本为 1.85。
+- 这是 Rust 2024 workspace，最低 Rust 版本为 1.88。
 - 根 crate `xstars` 是紫微斗数排盘核心库；`cli/` 是命令行工具。
 - `xcal` 是历法依赖，开发环境要求与本仓库同级检出：`../xcal`。
 - 核心算法按 `src/astro/`、`src/star/`、`src/calendar/`、`src/config/`、`src/system/` 和 `src/i18n/` 分层；新增逻辑放入已有职责对应的模块。

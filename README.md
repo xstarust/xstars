@@ -2,7 +2,7 @@
 
 [![Crates.io](https://img.shields.io/badge/crates.io-unreleased-red)]()
 [![License](https://img.shields.io/badge/license-MIT-blue)]()
-![Rust](https://img.shields.io/badge/rust-1.85%2B-orange)
+![Rust](https://img.shields.io/badge/rust-1.88%2B-orange)
 
 Rust 实现的紫微斗数排盘算法库。类型安全、高性能、零 unsafe。
 
@@ -55,7 +55,7 @@ let yx = a.yunxian("2026-7-3").unwrap();
 let _flow = detect_patterns_at_layer(&a, &yx, Layer::Yearly);
 ```
 
-**注意**：Rust 最低版本 1.85（edition 2024）。
+**注意**：Rust 最低版本 1.88（edition 2024）。
 
 ## 功能
 

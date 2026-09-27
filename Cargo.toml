@@ -2,7 +2,7 @@
 name = "xstars"
 version = "0.1.0"
 edition = "2024"
-rust-version = "1.85"
+rust-version = "1.88"
 license = "MIT"
 description = "紫微斗数排盘引擎 — 紫微斗数算法库，支持多流派、多语言、运限系统"
 readme = "README.md"

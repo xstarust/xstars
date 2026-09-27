@@ -213,7 +213,7 @@ fn det_yangliang_changlu(ctx: &PatternCtx, patterns: &mut Vec<Pattern>) {
     {
         bonus.push(Condition::Brightness {
             star: StarName::Tianliang,
-            palace: PalaceRef::Pos(liang_pos.unwrap()),
+            palace: PalaceRef::Pos(pos),
             level: BrightnessFilter::MiaoWang,
         });
     }
