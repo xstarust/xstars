@@ -2,8 +2,9 @@
 
 > xstars 项目测试全览：测试目标、条件、期望值与入口索引。
 >
-> **统计**: 234 PASS, 0 ignored；另有 26 个 doctest PASS
-数据来源: `cargo test -p xstars`（当前代码口径）
+> **统计**: 234 个运行时测试 PASS、0 ignored；另有 26 个 doctest PASS
+>
+> 数据来源：`cargo test -p xstars --all-targets`（82 个单元测试 + 152 个集成测试）和 `cargo test -p xstars --doc`（26 个 doctest）。
 > **Lint**: `cargo clippy -- -D warnings` ✅
 
 ---
@@ -20,6 +21,9 @@
    - [1.7 历法计算 (`calendar_test.rs`)](#17-历法计算-calendar_testrs)
    - [1.8 流派配置 (`config_test.rs`)](#18-流派配置-config_testrs)
    - [1.9 工具函数 (`utils_test.rs`)](#19-工具函数-utils_testrs)
+   - [1.10 国际化 (`i18n_test.rs`)](#110-国际化-i18n_testrs)
+   - [1.11 格局识别 (`pattern.rs`)](#111-格局识别-patternrs)
+   - [1.12 运限层 (`yunxian_test.rs`)](#112-运限层-yunxian_testrs)
 2. [单元测试](#2-单元测试)
    - [2.1 天干 (`system/tiangan.rs`)](#21-天干-systemtianganrs)
    - [2.2 地支 (`system/dizhi.rs`)](#22-地支-systemdizhirs)
@@ -208,7 +212,14 @@
 
 ---
 
-### 1.10 格局识别 (`pattern.rs`)
+### 1.10 国际化 (`i18n_test.rs`)
+
+| # | 测试目标 | 测试条件 | 测试期望 | 入口 |
+|---|----------|----------|----------|------|
+| 1 | 韩语星盘输出 | 韩语语言环境 | 星盘关键字段可正常生成 | `test_korean_astrolabe` |
+| 2 | 越南语星盘输出 | 越南语语言环境 | 星盘关键字段可正常生成 | `test_vietnamese_astrolabe` |
+
+### 1.11 格局识别 (`pattern.rs`)
 
 | # | 测试目标 | 测试条件 | 测试期望 | 入口 |
 |---|----------|----------|----------|------|
@@ -222,7 +233,7 @@
 
 ---
 
-### 1.11 运限层 (`yunxian_test.rs`)
+### 1.12 运限层 (`yunxian_test.rs`)
 
 | # | 测试目标 | 测试条件 | 测试期望 | 入口 |
 |---|----------|----------|----------|------|
