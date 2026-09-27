@@ -16,7 +16,6 @@
 //! | 函数 | 说明 |
 //! |---|---|
 //! | [`compute_bazi`] | 公历日期 + 时辰 → 八字 + 日期信息 |
-//! | [`compute_bazi_lunar`] | 农历日期 + 时辰 → 八字 + 阳历 + 日期信息 |
 //! | [`lunar_to_solar`] | 农历 → 阳历逆转换 |
 //! | [`format_lunar_date`] | 格式化农历日期字符串 |
 //!
@@ -102,7 +101,7 @@ pub struct SolarDate {
 pub struct LunarDate {
     /// 农历年份
     pub year: isize,
-    /// 农历月份（1-12；闰月时按配置规则调整，参见 [`LeapMonthRule`]）
+    /// 农历月份（1-12；闰月时按配置规则调整，参见 [`crate::LeapMonthRule`]）
     pub month: usize,
     /// 农历日期（1-30）
     pub day: usize,
